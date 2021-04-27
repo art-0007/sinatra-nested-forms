@@ -3,14 +3,18 @@ class Ship
 
     SHIPS = []
 
-    def initialize
-        @name = name
-        @type = type
-        @booty = booty
+    def initialize(ship)
+        @name = ship["name"]
+        @type = ship["type"]
+        @booty = ship["booty"]
         SHIPS << self
     end
 
     def self.all    
         SHIPS  
     end 
+
+    def self.clear
+        SHIPS.clear 
+    end
 end
